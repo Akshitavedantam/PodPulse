@@ -1,100 +1,81 @@
 <div align="center">
 
-🎙️ PodPulse
+<h1 align="center">🎙️ PodPulse</h1>
 
-AI-Powered Content Intelligence Engine
-
-<br />
+<p align="center"><strong><b>AI-Powered Content Intelligence Engine<b/></strong></p>
 
 <p align="center">
-<b>Predict listener drop-off points before you record.</b><br />
-Trained on 5,000+ viral segments from Lex Fridman, MrBeast, and TED Talks.
+Predict listener drop-off points before you record.<br>
+Trained on 2,000+ viral segments from Lex Fridman, MrBeast, and TED Talks.
 </p>
-
 </div>
 
- The Problem
+# ❗The Problem 
 
 Content creators rely on lagging indicators (views, retention graphs) to judge success. By the time they see the data, the episode is already published.
 
 PodPulse solves this by providing leading indicators. It uses Natural Language Processing (NLP) to simulate listener psychology and flag "high-risk" script sections before production.
 
- Architecture
+# 📐Architecture
 
-Component
+| Component | Tech Stack | Responsibility |
+| :--- | :--- | :--- |
+|  Brain | `scikit-learn` | Hybrid Random Forest Classifier (Text + Metadata). |
+|  API | `FastAPI` | Real-time inference engine (<100ms latency). |
+|  UI | `Next.js 14` | Interactive engagement dashboard. |
+|  Data | `YouTube API` | Custom scraper for building the 2k+ sample dataset. |
 
-Tech Stack
-
-Responsibility
-
- Brain
-
-scikit-learn
-
-Hybrid Random Forest Classifier (Text + Metadata).
-
- API
-
-FastAPI
-
-Real-time inference engine (<100ms latency).
-
- UI
-
-Next.js 14
-
-Interactive engagement dashboard.
-
- Data
-
-YouTube API
-
-Custom scraper for building the 5k+ sample dataset.
-
- Quick Start
+# 🚀 Quick Start
 
 1. Clone & Setup
-
+   
+  ```bash
 git clone [https://github.com/Akshitavedantam/PodPulse.git](https://github.com/Akshitavedantam/PodPulse.git)
 cd PodPulse
+```
 
 
 2. Launch Backend (API)
-
+```bash
 cd backend
 python -m venv venv
-
+```
 # Activate Environment
 # Windows:
+```bash
 .\venv\Scripts\Activate.ps1
+```
 # Mac/Linux:
+```bash
 source venv/bin/activate
-
+```
 # Install & Run
+```bash
 pip install -r requirements.txt
 uvicorn main:app --reload
-
+```
 
 3. Launch Frontend (UI)
-
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
 
 👉 Open http://localhost:3000 to test the engagement engine.
 
 🧠 Model Logic
 
-The model analyzes 4 proxies for human boredom:
+ The model analyzes 4 proxies for human boredom:
 
-Sentiment Volatility: (VADER) High emotion correlates with retention.
+* <u>Sentiment Volatility:</u> (VADER) High emotion correlates with retention.
 
-Interaction Hooks: Question marks (?) re-engage listener attention.
+* <u>Interaction Hooks:</u>  Question marks (?) re-engage listener attention.
 
-Cognitive Load: High average word length without breaks fatigues the listener.
+* <u>Cognitive Load:</u>  High average word length without breaks fatigues the listener.
 
-Speech Quality: High filler word ratio (um, like) signals low confidence.
+* <u>Speech Quality:</u>  High filler word ratio (um, like) signals low confidence.
 
 📊 Performance
 
@@ -105,3 +86,7 @@ Dataset: 50/50 Balanced Split (High vs Low Engagement)
 📜 License
 
 Distributed under the MIT License.
+<p align="right">
+  <i>Designed & Developed by</i><br>
+  <b>Akshita Vedantam</b>
+</p>
