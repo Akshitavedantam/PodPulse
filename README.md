@@ -10,11 +10,10 @@ Trained on 2,000+ viral segments from Lex Fridman, MrBeast, and TED Talks.
 </p>
 </div>
 <p align="center">
-  <a href="https://your-live-link.com" target="_blank">
-    <img src="https://img.shields.io/badge/ LIVE DEMO-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"/>
+  <a href="https://podpulse-two.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/LIVE_DEMO-9B59B6?style=for-the-badge&logo=githubactions&logoColor=white&labelColor=000000" alt="Live Demo"/>
   </a>
 </p>
-
 
 # ❗The Problem 
 
