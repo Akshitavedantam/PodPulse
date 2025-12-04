@@ -1,82 +1,107 @@
-PodPulse
+<div align="center">
 
-PodPulse is a content intelligence engine that analyzes podcast transcripts to predict listener retention. By combining linguistic complexity metrics with sentiment volatility analysis, it identifies high-risk drop-off points in audio content before production.
+🎙️ PodPulse
 
-The system was trained on a custom dataset of 5,000+ segments aggregated from high-performing (e.g., Lex Fridman, MrBeast) vs. low-performing audio transcripts, achieving an F1-score of ~0.89 on the validation set.
+AI-Powered Content Intelligence Engine
 
-📸 Dashboard Preview
+<br />
 
-Core Features
+<p align="center">
+<b>Predict listener drop-off points before you record.</b><br />
+Trained on 5,000+ viral segments from Lex Fridman, MrBeast, and TED Talks.
+</p>
 
-Predictive Scoring: Binary classification model (Random Forest) to flag "At-Risk" vs. "Optimized" segments.
+</div>
 
-Multimodal Feature Extraction:
+ The Problem
 
-Sentiment Volatility: Measures emotional variance using VADER (monotone vs. dynamic).
+Content creators rely on lagging indicators (views, retention graphs) to judge success. By the time they see the data, the episode is already published.
 
-Cognitive Load: Calculates lexical density and sentence complexity.
+PodPulse solves this by providing leading indicators. It uses Natural Language Processing (NLP) to simulate listener psychology and flag "high-risk" script sections before production.
 
-Hook Detection: Identifies interrogative structures that drive re-engagement.
+ Architecture
 
-Real-time Inference: sub-100ms API response time using FastAPI.
+Component
 
-System Architecture
+Tech Stack
 
-The project follows a decoupled Client-Server architecture:
+Responsibility
 
-ML Pipeline (/ml_engine)
+ Brain
 
-Data Ingestion: Custom scraper (youtube-transcript-api) handling rate limits and parsing.
+scikit-learn
 
-Preprocessing: scikit-learn pipeline with ColumnTransformer for text (TF-IDF) and numeric scaling.
+Hybrid Random Forest Classifier (Text + Metadata).
 
-Model: Hybrid Random Forest Classifier (100 estimators).
+ API
 
-Backend API (/backend)
+FastAPI
 
-FastAPI: Exposes a /predict REST endpoint.
+Real-time inference engine (<100ms latency).
 
-On-the-fly Engineering: Raw text inputs are processed through the same feature extraction pipeline used during training to ensure consistency.
+ UI
 
-Frontend (/frontend)
+Next.js 14
 
-Next.js 14: Server-side rendering and static optimization.
+Interactive engagement dashboard.
 
-Visualization: Interactive engagement charts using recharts.
+ Data
 
-Local Development
+YouTube API
 
-Prerequisites
+Custom scraper for building the 5k+ sample dataset.
 
-Python 3.10+
+ Quick Start
 
-Node.js 18+
+1. Clone & Setup
 
-1. Backend Setup
-
-# Clone repository
-git clone [https://github.com/YOUR_USERNAME/PodPulse.git](https://github.com/YOUR_USERNAME/PodPulse.git)
+git clone [https://github.com/Akshitavedantam/PodPulse.git](https://github.com/Akshitavedantam/PodPulse.git)
 cd PodPulse
 
-# Setup virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: .\venv\Scripts\Activate.ps1
 
-# Install dependencies & run server
-pip install -r requirements.txt
+2. Launch Backend (API)
+
 cd backend
+python -m venv venv
+
+# Activate Environment
+# Windows:
+.\venv\Scripts\Activate.ps1
+# Mac/Linux:
+source venv/bin/activate
+
+# Install & Run
+pip install -r requirements.txt
 uvicorn main:app --reload
 
 
-2. Frontend Setup
+3. Launch Frontend (UI)
 
 cd frontend
 npm install
 npm run dev
 
 
-The application will be available at http://localhost:3000.
+👉 Open http://localhost:3000 to test the engagement engine.
 
-License
+🧠 Model Logic
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+The model analyzes 4 proxies for human boredom:
+
+Sentiment Volatility: (VADER) High emotion correlates with retention.
+
+Interaction Hooks: Question marks (?) re-engage listener attention.
+
+Cognitive Load: High average word length without breaks fatigues the listener.
+
+Speech Quality: High filler word ratio (um, like) signals low confidence.
+
+📊 Performance
+
+Accuracy: ~89% (Validation Set)
+
+Dataset: 50/50 Balanced Split (High vs Low Engagement)
+
+📜 License
+
+Distributed under the MIT License.
