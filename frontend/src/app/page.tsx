@@ -14,7 +14,6 @@ import {
 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
-
 interface PredictionResponse {
   is_drop_off: number; 
   confidence_score: number;
@@ -27,8 +26,7 @@ interface ChartMetric {
   color: string;
 }
 
-
-const API_URL = 'http://127.0.0.1:8000/predict'; 
+const API_URL = 'https://podpulse-rt7b.onrender.com/predict'; 
 
 export default function Dashboard() {
   const [text, setText] = useState<string>('');
@@ -47,16 +45,14 @@ export default function Dashboard() {
       setData(res.data);
     } catch (err) {
       console.error(err); 
-      setError('Connection failed. Ensure the backend server is running.');
+      setError('Connection failed. The backend might be waking up (wait 30s) or check your network.');
     } finally {
       setLoading(false);
     }
   };
 
- 
   const getMetrics = (result: PredictionResponse | null): ChartMetric[] => {
     if (!result) return [];
-    
     
     const isGood = result.is_drop_off === 0;
     
