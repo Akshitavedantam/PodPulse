@@ -9,17 +9,20 @@ Predict listener drop-off points before you record.<br>
 Trained on 2,000+ viral segments from Lex Fridman, MrBeast, and TED Talks.
 </p>
 </div>
-<p align="center">
-  <a href="https://podpulse-two.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/LIVE_DEMO-9B59B6?style=for-the-badge&logo=githubactions&logoColor=white&labelColor=000000" alt="Live Demo"/>
-  </a>
-</p>
 
 # ❗The Problem 
 
 Content creators rely on lagging indicators (views, retention graphs) to judge success. By the time they see the data, the episode is already published.
 
 PodPulse solves this by providing leading indicators. It uses Natural Language Processing (NLP) to simulate listener psychology and flag "high-risk" script sections before production.
+
+# check it out!
+
+<p align="center">
+  <a href="https://podpulse-two.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/Live_Demo-000000?style=flat&logo=vercel&logoColor=white" alt="Live Demo"/>
+  </a>
+</p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Akshitavedantam/PodPulse/main/assets/demo.png" alt="Dashboard Preview" width="100%">
