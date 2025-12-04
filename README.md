@@ -16,6 +16,10 @@ Content creators rely on lagging indicators (views, retention graphs) to judge s
 
 PodPulse solves this by providing leading indicators. It uses Natural Language Processing (NLP) to simulate listener psychology and flag "high-risk" script sections before production.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Akshitavedantam/PodPulse/main/assets/demo.png" alt="Dashboard Preview" width="100%">
+</p>
+
 # 📐Architecture
 
 | Component | Tech Stack | Responsibility |
