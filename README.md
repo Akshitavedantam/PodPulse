@@ -16,17 +16,32 @@ Content creators rely on lagging indicators (views, retention graphs) to judge s
 
 PodPulse solves this by providing leading indicators. It uses Natural Language Processing (NLP) to simulate listener psychology and flag "high-risk" script sections before production.
 
+#  Real World Examples
+<table width="100%">
+<tr>
+<th width="40%">Input Script Segment</th>
+<th width="60%">PodPulse Prediction </th>
+</tr>
+<tr>
+<td><i>"So, um, basically, I think that maybe we should try to like, you know, go there."</i></td>
+<td>
+<img src="./assets/case1.png" width="100%" alt="Case 1: Drop Off Risk"/>
+</td>
+</tr>
+<tr>
+<td><i>"What happens when a star dies? It doesn't just fade. It collapses, creating a black hole that defies physics."</i></td>
+<td>
+<img src="./assets/case2.png" width="100%" alt="Case 2: High Retention"/>
+</td>
+</tr>
+</table>
+
 # check it out!
 
-<p align="center">
-  <a href="https://podpulse-two.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/Live_Demo-000000?style=flat&logo=vercel&logoColor=white" alt="Live Demo"/>
-  </a>
-</p>
+<h1 align="center">
+  <a href="https://podpulse-two.vercel.app/"><b>🔗 Live Demo</b></a>
+</h1>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Akshitavedantam/PodPulse/main/assets/demo.png" alt="Dashboard Preview" width="100%">
-</p>
 
 # 📐Architecture
 
